@@ -8,5 +8,5 @@ public interface BookService {
 
     public List<Book> getALL();
 
-    public Book findById();
+    public Book findById(int id);
 }

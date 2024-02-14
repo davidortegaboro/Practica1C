@@ -8,5 +8,5 @@ import java.util.List;
 public interface BookRepository {
     public List<Book> returnListBooks();
 
-    public Book findById();
+    public Book findById(int id);
 }

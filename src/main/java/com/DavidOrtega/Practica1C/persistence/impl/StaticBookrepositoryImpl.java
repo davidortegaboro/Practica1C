@@ -18,7 +18,12 @@ public class StaticBookrepositoryImpl implements BookRepository {
         return this.listBooks;
     }
 
-    public Book findById(){
-    return null;
+    public Book findById(int id){
+        for (Book book : this.listBooks){
+            if (id == book.getId()){
+                return book;
+            }
+        }
+        return null;
     }
 }

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Styles.css">
+    <title>Detalles del Libro</title>
+</head>
+<body>
+<header>
+    <h2>Detalles</h2>
+    <img src="../images/Logo.png" alt="Esta imagen no funciona"/>
+</header>
+
+<div class="topBar"><h2 class="tittleTopBar">Libro</h2></div>
+<a href="http://localhost:8080/index"><p id="toIndexInAbout">Inicio</p></a>
+<div id="BookDetails">
+
+    <div th:text="${book.id}"></div>
+    <div th:text="${book.title}"></div>
+    <div th:text="${book.author}"></div>
+    <img th:src="${book.cover}" alt="Mi imagen"/>
+
+
+</div>
+</body>
+</html>

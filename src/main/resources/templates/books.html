@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Libros</title>
+    <link rel="stylesheet" href="/Styles.css">
 </head>
 <body>
 
+<header>
+    <h2>Libros</h2>
+    <img src="../images/Logo.png" alt="Esta imagen no funciona"/>
+</header>
+
+<a href="http://localhost:8080/index"><p id="backToIndexInInsertBookAndBooks">Inicio</p></a>
+
+<div id="book">
+    <a th:each="book : ${books}" th:href="@{${'/books/' + book.id}}">
+        <div class="img-div">
+            <img class="cover" th:src="${book.cover}" alt="Mi imagen"/>
+        </div>
+        <div id="book-body">
+            <p th:text="|${book.title} - ${book.author}|">Texto por defecto</p>
+        </div>
+    </a>
+</div>
 </body>
 </html>

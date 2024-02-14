@@ -7,15 +7,9 @@ import com.DavidOrtega.Practica1C.persistence.impl.StaticBookrepositoryImpl;
 
 import java.util.List;
 
-public class BookServiceImpl implements BookService {
+public class BookServicePrueba implements BookService {
 
-   private BookRepository bookRepository;
-
-    public BookServiceImpl(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
-
-
+    BookRepository bookRepository = new StaticBookrepositoryImpl();
     public List<Book> getALL(){
         return  this.bookRepository.returnListBooks();
     }
